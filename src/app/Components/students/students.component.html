@@ -1,0 +1,37 @@
+<div class="container">
+    
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" [(ngModel)]="id" id="id"  placeholder="Enter ID">
+          </div>
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="name" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="City">City</label>
+            <input type="text" class="form-control" id="City" [(ngModel)]="city"  placeholder="Enter Name">
+          </div>
+         
+          <button type="button" class="btn btn-primary" (click)="Add()">Add</button>
+  <hr>
+<table class="table table-hover">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students">
+<td>{{s.id}}</td>
+<td>{{s.name}}</td>
+<td>{{s.City}}</td>
+<td>
+    <a class="btn btn-secondary mr-2" routerLink="{{s.id}}">Details</a>
+    <a class="btn btn-warning mr-2" routerLink="update/{{s.id}}">Update</a>
+    <a class="btn btn-danger mr-2" (click)="Delete(s.id);$event.stopPropagation();">Delete</a>
+</td>
+        </tr>
+    </tbody>
+</table>
+</div>

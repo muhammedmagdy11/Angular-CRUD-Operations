@@ -1,0 +1,18 @@
+
+<div class="container">
+  <h1>Update Student Num {{student.id}}</h1>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" [(ngModel)]="student.id" id="id"  placeholder="Enter ID">
+          </div>
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="student.name" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="City">City</label>
+            <input type="text" class="form-control" id="City" [(ngModel)]="student.City"  placeholder="Enter Name">
+          </div>
+         
+          <button type="button" class="btn btn-warning" (click)="Update()">Update</button>
+</div>
